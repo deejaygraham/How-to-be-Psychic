@@ -21,27 +21,16 @@ We are looking to hire so if you want to know more about that, please grab me so
 
 ## Confession
 
-No judgements but Who here has ever felt they are trapped by their code? It's hard to make changes, and any kind of change they make 
-is going to make things more difficult in the future? The kinds of changes get so mired down in details 
-and breakages and irrelevant abstractions, and even seemingly small changes spiral out of control across the 
-codebase and what you really want to do is just to abandon it to the elements and start again? 
+Let's kick off with some confessions. No judgements but who here has ever felt they are trapped by their code? 
+It's hard to make changes, and any kind of change they make is going to make things more difficult in the future? 
+The kinds of changes get so mired down in details and breakages and irrelevant abstractions, and even seemingly 
+small changes spiral out of control across the codebase and what you really want to do is just to abandon it 
+to the elements and start again? 
 
 Congratulations, you are not psychic and never have been. I am also just as not psychic as you are not.
 
 In fact, I am giving this talk because I have painted myself into so many corners with bad designs that I know 
 exactly what that feels like.
-
-What I want to talk about is giving the appearance of being psychic without all the bother of all of that supernatural
-carry on. In particular I want to talk about being psychic in design rather than in debugging. Psychic debugging or 
-suggesting areas to look at to find the cause of a bug in the software is a useful but still not supernatural skill but 
-that's a whole other talk probably.
-
-## Maximum Value
-
-It was either Kent Beck or Ward Cunninghma (or another XP person) said that the system should have exactly enough 
-architecture to implement the current set of stories (and therefore tests). To get maximum value from the 
-development process, we want the design to look like it was purpose built for your application features 
-as it is now and nothing else (so we don't waste anything).
 
 ## Clickbait
 
@@ -58,12 +47,21 @@ so totally awesome, plus I'm actually psychic" and to a person they were all "We
 that made me think back to Margaret Rutherford in the film. Later in the plot of the movie, it turns out her character is a bit of a fraud and is only 
 playing at being a medium. And that's want I want you for you!
 
+What I want to talk about is giving the appearance of being psychic without all the bother of all of that supernatural
+carry on. In particular I want to talk about being psychic in design rather than in debugging. Psychic debugging or 
+suggesting areas to look at to find the cause of a bug in the software is a useful but still not supernatural skill but 
+that's a whole other talk probably.
+
 What I want to talk about this morning is Evolutionary Design, a technique or set of techniques that have been around since the early days 
 of XP in the early 2000s? This, for me, has been the biggest shift in my development as a software person and has meant that I spend much 
 less time stressing about making perfect decisions and am much more productive as a result.
 
-5 minutes
-------------------------------------
+## Maximum Value
+
+It was either Kent Beck or Ward Cunninghma (or another XP person) said that the system should have exactly enough 
+architecture and design to implement the current set of stories (and therefore tests). To get maximum value from the 
+development process, we want don;t want to waste any effort and we want the design to look like it was purpose-built for the 
+features that exist at this moment and nothing else.
 
 ## Back up
 
@@ -118,52 +116,211 @@ As if it needs saying, an adhoc approach almost never gives great results unless
 it can live in your head comfortably and the cost of throwing away a system and rewriting is not that much. In that kind of case, any sort of design 
 doesn't matter too much.
 
-12 MINUTES
------------------------------------- 
+The design should evolve as the system grows. Anything like a BDUF system is purely based on guesswork and will necessarily 
+be overly complex and bloated with code we aren;t going to have needed in the end. This unnecessary complexity adds expense - time - takes longer to 
+implement, to udnerstand and maintain when a good proportion of it may not be needed.
 
-## XP
-
-So my experience with ED, The design should evolve as the system grows. Anything like a BDUF system is purely based on guesswork and will necessarily be overly complex and bloated with 
-code we aren;t going to have needed in the end. This unnecessary complexity adds expense - time - takes longer to implement, to udnerstand 
-and maintain when a good proportion of it may not be needed.
-
-Simple Desing -> Enabled by Refactoring -> Backed by fast and reliable tests
-
-This can all lead to horrific outcomes and stress for us as developers. I said before that clickbait can 
-get us in terrible trouble didn't I? How about I change the title of the talk to be...
-
+This can all lead to horrific outcomes and stress for us as developers. 
 
 ## Evolutionary Design ?
+
+"It is not necessary to change. Survival is not mandatory." W. Edwards Deming
 
 So what do I mean when I say evolutionary design? It means starting with something small, making it bigger and adding to it, all while keeping 
 the design clean and making it more complex over time.
 
 John Gall's Law: 
 
-"All Complext systems that work evolved from simpler sytsms that worked". If you want to build a complex system that works, build a 
+"All Complex systems that work evolved from simpler sytsms that worked". If you want to build a complex system that works, build a 
 simpler system first, then improve it over time.
 
 This is Very much like growing a garden rather than building a bridge. Evolutionary design lets you build a design for right now and adapt 
-it as you go along and thereby protects your capacity to deliver features over the longer term. Often when looking at code, we feel a vague idea 
-that we should be able to make a small change but often it can be a lot of effort. You can't get to where you want to be from where you 
-currently are. 
+it as you go along and thereby protects our capacity to deliver features over the longer term. 
 
 Evolutionary design lets us adapt code to meet the needs of the future without having to actually anticipate the needs of the future. 
-It lets us pretend that the system we have right now is the result of all of the correct decisions we made at the beginning rather 
-than along the way. 
-We can pretend that we were psychic at the beginning when in fact we have been moving the seance goalposts all the time - to 
-painfully mix a metaphor.
-
-Good news is that this is a skill or set of skills that can be learned, and you can be competent and improve as you practice.
-
 If we can defer decisions about the software, we can make the design better, make design decisions less expensive to change, 
 reverse mistakes or allow you to change your mind whenever you need to. This leads us to having less stress and more spare 
-energy to devote to harder problems.
+energy to devote to harder problems. It's far too easy to put in a design for some work coming up and to get it wrong and it can be really hard
+to change or take out incorrectly designed code after the fact.
 
-It's easy to put in a design for some work coming up and to get it wrong but it's harder to change or take out 
-incorrectly designed code
-. 
+ED lets us pretend that the system we have right now is the result of all of the correct decisions we made at the beginning rather 
+than along the way. We can pretend that we were psychic at the beginning when in fact we have been moving the seance goalposts 
+all the time - to painfully mix a metaphor.
+
+Good news is that this is a skill or set of skills that can be learned, and you can be competent fairly quickly and improve as you 
+practice, and practice is an important part of it.
+
+## Process
+
+Desciplined
+Simple Design - simplest - don't anticipate the future.
+Small Steps - small, smaller,
+Incremental Design - Not patching over existing, reworking to match current requirements as they come in.
+Continuous Design - Design all the time - every day / hour.
+
+Simple Design -> Enabled by Refactoring -> Backed by fast and reliable tests
+
+To begin with we start as simple as possible. 
+
+## Walking Skeleton
+
+Evolutionary Design often means starting with the simplest possible design and we call a walking skeleton. the barest bones of 
+an application, perhaps something as simple as a console application that proves something about the system. This is the application
+that you need right now. Perhaps the smallest of features.
+This is the foundation that we will hook all of the rich functionality on going forard. Something that grows in complexity 
+as the application grows.Keep it simple, which is harder than you think and often goes against our natural inclination
+
+'Simplest Thing that Could Possibly Work' - Ron Jeffries
+
+'YAGNI' - Functionality is an asset but code is a liability, takes time to write, understand, build, maintain.
+
+## 1. Shitty first draft
+
+'Almost all good writing begins with terrible first efforts'
+
+Annie Lamott "Bird by Bird" 1994
+
+Free yourself from having to be perfect. If you aren't building a bridge or a nuclear 
+power station, then does the design need to be entirely correct at the beginning? Annie Lamott
+came up with the idea of the shitty first draft, the idea that we know the first time we do 
+something it will be awful and that is what keeps us from taking that first step. But Annie 
+says, so what? It;s awful but we can improve it. I've seen this approach free people from 
+analysis paralysis and other forms of procrastination and get going on something.
+
+Helen help
+
+## Wait
+
+Wait until you eventually really really do need something before you need it. We experienced this a while ago on one of our 
+web projects. We needed amendability built in and we had a guess at what we should be adding about 2 years ago when the system 
+was just getting started and we had some early feedback from customers who were really enthusiastic about it. We sketched out 
+a possible solution but didn't implement it. We didn't need it at the time and I'm super glad we didn't. We now need it and I'm going to start work on it 
+in January but the solution we guessed at doesn't at all fit in with how the application has developed. 
+
+## Patience
+
+Take a best guess,
+Does it work
+Is it good enough (never perfect)
+Make it better each time you touch it.
+
+## Improve as you go
+
+Improve as you go along. Kaizen or the boy scout rule or the camping rule? Make small changes and small improvements as you go 
+in the part of the code you are working on (nowhere else! don't go diving into other places in the code and fight the urge to 
+'refactor'/rewrite!) and leave it a little better than you found it.
+
+## TDD
+
+Think - Red - Green - Refactor ? -> Green -> Think
+
+## Constant Review
+
+Adding and removing methods, movig constantly reviewing which way is better and 
+
+
+## Merciless refactoring
+
+Kent Beck talks about Making the change easy then making the easy change. When working on code, 
+consider how the code looks at the moment, and think about what would make the upcoming change easier to make?
+Make the change
+How can we make the cide easier to understand, maintain
+
+
+## Process
+
+Review code to be worked on
+What are the flaws? Are there code smells?
+Reverse engineer the current design - whiteboard?
+Imagine how to improve the design
+ - What's the first thing we can work on?
+ - Not what are all the things
+ - Small steps
+Refactor to improve the design, how easy is it to reverse?
+Can you add tests?
+
+Don't try to fix everything - most important thing first, next? maybe don't have time to fix everything
+
+
+## Reducing cost of change
+
+Take requirements as late as possible
+Use simple design
+Make it continuous
+Review for maintainability, readability, understanding
+Make it reversible, make it easier to extend into places you aren't expecting
+Keep it adaptable to change.
+
+## Refactoring
+
+Many people hide large scale, ground-up rewrites behind the R word. Don't, refactoring is the tiny change 
+you can make safely. How small? Think of the smallest change you could make right now? No, smaller than that. Smaller, smaller.
+Refactoring is the discipline that makes all this work. When I say refactoring, I mean tiny, tiny small,
+reversable steps that we can use to change code in almost imperceptible ways that add up to large changes over 
+time but are safe and mostly entirely automated by our IDEs. There are more elaborate refactorings that can be done 
+e.g. Martin Fowler's book that are too wide ranging or require too much context to be automated, 
+but you can go a long way just by using the automated refactorings provided by your IDE.
+
+I mentioned right at the start, that refactoring is not rewriting from scratch (although I have heard people call it that)
+Here are the unscientific most common refactorings I find people use - both myself and my colleagues:
+
+Encapsulate Variable
+Extract Method (and Inline)
+Introduce Variable
+Introduce Constant
+Extract Parameter
+Rename (Method, variable)
+Move method
+Inline Method
+
+Got to definition, show usage
+
+Inspect - find what you want to change
+Prepare (can be other using refactorings) work on making change easier - research impact of the planned change
+Refactor - following steps
+Make the Thing
+Clean up - remove scaffolding that may have been needed in preparation Ctrl+Z
+Review - Does this make another change easier?
+
+## All the tests
+
+As a self-taught programmer, early in my career, I felt I wasn;t particularly good at writing code. I was working in 
+C++ and the stress I endured when finishing a piece of work and handing it over to be integrated and tested where someone would 
+inevitably find a critical null pointer kind of bug, meant that when TDD came along or just the idea of writing a test before, 
+at the same time, or just after you had written the code, I was immediately on board with that idea and way of working. It meant I 
+could write a bit of code, and test a bit in cycles and made much more progress that way. 
+
+Having complete code coverage is obviously the best to enable you to go fastest at evolutionary design but if we don't start out 
+in that perfect way then any tests you can do help you along. Manually testing the code yourself only gets you so far and quickly 
+gets old having to setup the same test time and time again to run against your code takes time and can be exhausting or just plain boring.
+
+At a minimum you can try integrating some form of testing into your legacy app or using something like approval tests in the application 
+if you can find a way to create a physical output from your program if one does not already exist. 
+
+Contract tests are a good way of ensuring that you don't accidentally change an external interface that you expose to clients, such that 
+they will be very unhappy about changing their code to match your changes.
+
+Microtests are best if you have them or can add them as you go along as you modify your system. I stole the term microtests from Mike Hill 
+who uses it in preference to Unit Tests since using that word seems to immediately start arguments between developers about what a unit is 
+and how you should test it. A microtest for me could be a test of a single function, a group of functions in a class or a group of logically 
+related classes to test a piece of behaviour. These are all tests that are done according to Michael Feathers definition without touching the 
+network, file system, global variables etc. Fast to run and reliable.  
+
+Tests are also an awesome indicator of the quality of your production code and give instant feedback on your design decisions like if the code is 
+going in a better or worse direction. Whenever you feel like the tests are getting annoying, painful, large setup, slow, anything you don't like. 
+Don't blame the tests (at least at first), suspect your production code is causing that pain. Often changing the design makes the tests better.
+
+## When not to Evolve
+
+If refactoring is difficult or is expensive (error prone, takes a long time to get feedback, long time to do) ED may 
+not be right for you. ED is good for internal systems but be careful of evolving interfaces that other teams or customers 
+rely on. Any client of you code can be affected by changes and if you don't have the power to change their code then 
+any consumer of your code can make that difficult.
+
+
 Now I've dispensed with the silly clickbait headline to grab your attention, the rest of my talk is really about...
+I said before that clickbait can get us in terrible trouble didn't I? How about I change the title of the talk to be...
+
 
 ## n Ways that you can improve you life developing software using evolutionary design (you won't believe number 5!!!)
 
@@ -173,6 +330,15 @@ There is a lot here and probably I could do a talk on each one of these so my in
 is to make you aware if you aren't already, point you to some resources and hopefully there 
 will be loads for you to study and learn in the next year (and you can come back to DDD and present
 what you learned :)
+
+
+
+
+
+Often when looking at code, we feel a vague idea 
+that we should be able to make a small change but often it can be a lot of effort. You can't get to where you want to be from where you 
+currently are. 
+
 
 ## Cold Reading 
 
@@ -196,70 +362,6 @@ knew his as Erich - Erich Weiss.Erik Weisz 1920s
 
 ## N Ways 
 
-## Walking Skeleton
-
-Evolutionary Design often means starting with the simplest possible design and we call a walking skeleton. the barest bones of 
-an application, perhaps something as simple as a console application that proves something about the system. This is the application
-that you need right now. Perhaps the smallest of features.
-This is the foundation that we will hook all of the rich functionality on going forard. Something that grows in complexity 
-as the application grows.Keep it simple, which is harder than you think and often goes against our natural inclination
-
-'Simplest Thing that Could Possibly Work' - Ron Jeffries
-
-'YAGNI' - Functionality is an asset but code is a liability, takes time to write, understand, build, maintain.
-
-Desciplined
-Simple Design - simplest - don't anticipate the future.
-Incremental Design - rework to match current requirements as they come in.
-Continuous Design - Design all the time - every day / hour.
-
-## 1. Shitty first draft
-
-'Almost all good writing begins with terrible first efforts'
-
-Annie Lamott "Bird by Bird" 1994
-
-Free yourself from having to be perfect. If you aren't building a bridge or a nuclear 
-power station, then does the design need to be entirely correct at the beginning? Annie Lamott
-came up with the idea of the shitty first draft, the idea that we know the first time we do 
-something it will be awful and that is what keeps us from taking that first step. But Annie 
-says, so what? It;s awful but we can improve it. I've seen this approach free people from 
-analysis paralysis and other forms of procrastination and get going on something.
-
-Helen help
-
-20 minutes
--------------------------------------
-
-## Wait
-
-Wait until you eventually really really do need something before you need it. We experienced this a while ago on one of our 
-web projects. We needed amendability built in and we had a guess at what we should be adding about 2 years ago when the system 
-was just getting started and we had some early feedback from customers who were really enthusiastic about it. We sketched out 
-a possible solution but didn't implement it. We didn't need it at the time and I'm super glad we didn't. We now need it and I'm going to start work on it 
-in January but the solution we guessed at doesn't at all fit in with how the application has developed. 
-
-## Improve as you go
-
-Improve as you go along. Kaizen or the boy scout rule or the camping rule? Make small changes and small improvements as you go 
-in the part of the code you are working on (nowhere else! don't go diving into other places in the code and fight the urge to 
-'refactor'/rewrite!) and leave it a little better than you found it.
-
-## TDD
-
-Think - Red - Green - Refactor ? -> Green -> Think
-
-## Constant Review
-
-Adding and removing methods, movig constantly reviewing which way is better and 
-
-
-## Merciless refactoring
-
-Kent Beck talks about Making the change easy then making the easy change. When working on code, 
-consider how the code looks at the moment, and think about what would make the upcoming change easier to make?
-Make the change
-How can we make the cide easier to understand, maintain
 
 ## Ditch SOLID
 
@@ -300,69 +402,6 @@ Obvious ness - what is obvious to you is obvious to you. Get feedback from other
 on how readable, understandable, maintainable something is.
 Isolated - make use of abstractions like interfaces so that internals can change and rest of application does not. Especially true with 3rd party libs.
 
-
-## Process
-
-Review code to be worked on
-What are the flaws? Are there code smells?
-Reverse engineer the current design - whiteboard?
-Imagine how to improve the design
- - What's the first thing we can work on?
- - Not what are all the things
- - Small steps
-Refactor to improve the design, how easy is it to reverse?
-Can you add tests?
-
-Don't try to fix everything - most important thing first, next? maybe don't have time to fix everything
-
-
-## Patience
-
-Take a best guess,
-Does it work
-Is it good enough (never perfect)
-Make it better each time you touch it.
-
-
-## Reducing cost of change
-
-Take requirements as late as possible
-Use simple design
-Make it continuous
-Review for maintainability, readability, understanding
-Make it reversible, make it easier to extend into places you aren't expecting
-Keep it adaptable to change.
-
-## Refactoring
-
-Many people hide large scale, ground-up rewrites behind the R word. Don't, refactoring is the tiny change 
-you can make safely. How small? Think of the smallest change you could make right now? No, smaller than that. Smaller, smaller.
-Refactoring is the discipline that makes all this work. When I say refactoring, I mean tiny, tiny small,
-reversable steps that we can use to change code in almost imperceptible ways that add up to large changes over 
-time but are safe and mostly entirely automated by our IDEs. There are more elaborate refactorings that can be done 
-e.g. Martin Fowler's book that are too wide ranging or require too much context to be automated, 
-but you can go a long way just by using the automated refactorings provided by your IDE.
-
-I mentioned right at the start, that refactoring is not rewriting from scratch (although I have heard people call it that)
-Here are the unscientific most common refactorings I find people use - both myself and my colleagues:
-
-Extract Method
-Introduce Variable
-Introduce Constant
-Extract Parameter
-Rename (Method, variable)
-Move method
-Inline Method
-
-Got to definition, show usage
-
-Inspect - find what you want to change
-Prepare (can be other using refactorings) work on making change easier - research impact of the planned change
-Refactor - following steps
-Make the Thing
-Clean up - remove scaffolding that may have been needed in preparation
-Review - Does this make another change easier?
-
 ## Keyboard and IDE
 
 Pick the IDE you want to use and then stick with it, so that you can learn the keyboard shortcuts you need, both for 
@@ -380,42 +419,12 @@ when you maybe drive to work, it's so automatic sometimes you can't remember doi
 
 Refactoring of your code constantly implies that we need tests to make sure the changes we make don't break anything we don't expect.
 
-## All the tests
-
-As a self-taught programmer, early in my career, I felt I wasn;t particularly good at writing code. I was working in 
-C++ and the stress I endured when finishing a piece of work and handing it over to be integrated and tested where someone would 
-inevitably find a critical null pointer kind of bug, meant that when TDD came along or just the idea of writing a test before, 
-at the same time, or just after you had written the code, I was immediately on board with that idea and way of working. It meant I 
-could write a bit of code, and test a bit in cycles and made much more progress that way. 
-
-Having complete code coverage is obviously the best to enable you to go fastest at evolutionary design but if we don't start out 
-in that perfect way then any tests you can do help you along. Manually testing the code yourself only gets you so far and quickly 
-gets old having to setup the same test time and time again to run against your code takes time and can be exhausting or just plain boring.
-
-At a minimum you can try integrating some form of testing into your legacy app or using something like approval tests in the application 
-if you can find a way to create a physical output from your program if one does not already exist. 
-
-Contract tests are a good way of ensuring that you don't accidentally change an external interface that you expose to clients, such that 
-they will be very unhappy about changing their code to match your changes.
-
-Microtests are best if you have them or can add them as you go along as you modify your system. I stole the term microtests from Mike Hill 
-who uses it in preference to Unit Tests since using that word seems to immediately start arguments between developers about what a unit is 
-and how you should test it. A microtest for me could be a test of a single function, a group of functions in a class or a group of logically 
-related classes to test a piece of behaviour. These are all tests that are done according to Michael Feathers definition without touching the 
-network, file system, global variables etc. Fast to run and reliable.  
-
-Tests are also an awesome indicator of the quality of your production code and give instant feedback on your design decisions like if the code is 
-going in a better or worse direction. Whenever you feel like the tests are getting annoying, painful, large setup, slow, anything you don't like. 
-Don't blame the tests (at least at first), suspect your production code is causing that pain. Often changing the design makes the tests better.
-
 ## Strong Pair or Ensemble
 
 Lots or pair of people discussing the code, not on a syntax level, but on a how does this work, how does it fit with the rest of the code, 
 what direction should we go next? Thinking about design.
 
 'All the ' Woody Zuill quote for ensemble
-
-## Refactor Names
 
 ## How to Draw
 
@@ -497,26 +506,19 @@ judgement has already run a large number of "experiments" e.g. failed projects.
 
 Bad Judgement -> Terrible Mistakes -> Good Judgement
 
-## Example ? If we have time
-
-## Story splitting or narrowing
-
-## DDD
-
-## Event Storming
 
 ## IF in doubt
+
 Add a test
 Remove duplication of knowledge (not implementation)
-reduce the scope
-make a better name
+Reduce the scope
+Make a better name
 
-## When not to
 
-If refactoring is difficult or is expensive (error prone, takes a long time to get feedback, long time to do) ED may 
-not be right for you. ED is good for internal systems but be careful of evolving interfaces that other teams or customers 
-rely on. Any client of you code can be affected by changes and if you don't have the power to change their code then 
-any consumer of your code can make that difficult.
+
+
+
+
 
 
 
@@ -530,3 +532,7 @@ I want to just mention my work with We Think Code. It's a non-profit organizatio
 people who normally who not have access to university or higher education. It's a two year course and mentors are drawn 
 from SA itself, and also from around the world, as counsellors to groups of about 4-6 new developers. It is a great joy
 and again, if you would like to be involved or hear more about it, please let me know. 
+
+
+
+
