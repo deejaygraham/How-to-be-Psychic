@@ -52,7 +52,7 @@ carry on. In particular I want to talk about being psychic in design rather than
 suggesting areas to look at to find the cause of a bug in the software is a useful but still not supernatural skill but 
 that's a whole other talk probably.
 
-What I want to talk about this morning is Evolutionary Design, a technique or set of techniques that have been around since the early days 
+Actually this is about Evolutionary Design, a technique or set of techniques that have been around since the early days 
 of XP in the early 2000s? This, for me, has been the biggest shift in my development as a software person and has meant that I spend much 
 less time stressing about making perfect decisions and am much more productive as a result.
 
